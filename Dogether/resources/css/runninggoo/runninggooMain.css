@@ -1,0 +1,309 @@
+/* 헤더 */
+nav .logo {
+  float: left;
+  margin-left: 30px;
+}
+
+nav .logo a {
+  font-size: 28px;
+  line-height: 80px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+nav .logo em {
+  font-style: normal;
+  font-weight: 200;
+}
+
+nav {
+  background: black;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+}
+
+.menu-icon {
+  background: transparent;
+  border: 1px solid #fff;
+  width: 50px;
+  height: 50px;
+  margin: 15px 39px 0 auto;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.5s;
+  border-radius: 5px;
+}
+
+.menu-icon span,
+.menu-icon span:before,
+.menu-icon span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  display: block;
+  content: '';
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-icon span:before {
+  left: 0;
+  top: -10px;
+}
+
+.menu-icon span:after {
+  left: 0;
+  top: 10px;
+}
+
+.menu-icon.active {
+  background: rgba(250,250,250,0.2);
+}
+
+.menu-icon.active span {
+  background-color: transparent;
+}
+
+.menu-icon.active span:before,
+.menu-icon.active span:after {
+  top: 0;
+}
+
+.menu-icon.active span:before {
+  transform: rotate(135deg);
+}
+
+.menu-icon.active span:after {
+  transform: rotate(-135deg);
+}
+
+
+.overlay-menu.open {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.overlay-menu {
+    overflow: scroll;
+}
+
+.overlay-menu {
+    background: rgba(0, 0, 0, 0.95);
+    color: #ffffff;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 20%;
+    padding: 30px 0;
+    opacity: 0;
+    text-align: left;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}
+
+.overlay-menu::-webkit-scrollbar {
+    display: none;
+}
+
+/* 런닝구 메인 */
+body{
+	margin:0;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+/* nav{
+	background-color: black;
+} */
+
+.rn_room_list_wrap{
+	margin-top: 150px;
+}
+
+.runninggoo_card_inner{
+	position: relative;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+	max-width: 440px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.rn_card_user_profile{
+    margin-bottom: 20px;
+}
+
+.rn_profile_picture>img{
+    width: 30px;
+}
+
+.rn_profile_picture, .rn_profile_nickname, .rn_profile_eval, .rn_profile_memberCount{
+    display: inline-block;
+}
+
+.runninggoo_card_inner .kakao_map{
+    margin-bottom: 20px;
+}
+
+#map{
+	margin-bottom: 10px;
+}
+
+.rn_room_hashtag{
+	margin:0;
+    color: blue;
+}
+
+#jeonsong{
+	display:inline-block;
+	width:70px;
+	padding:5px;
+	background-color:black;
+	color:white;
+	text-align:center;
+	border-radius: 7px;
+	margin-left:10px;
+}
+
+.rn_card_host_comment_box{
+	position: absolute;
+	bottom: 90px;
+	left:80px;
+}
+
+.create_host_comment{
+	width: 400px;
+}
+
+.balloon {  
+ position:relative;
+ top:-60px;
+ left:25px;
+ margin: 50px;
+ padding: 10px;
+ width:200px; 
+ height:80px;
+ background:pink; 
+ border-radius: 10px;
+}
+.balloon:after { 
+ border-top:0px solid transparent; 
+ border-left: 10px solid transparent; 
+ border-right: 10px solid transparent; 
+ border-bottom: 10px solid pink; 
+ content:""; 
+ position:absolute;
+ top:-10px;
+ left:170px;  
+}
+
+#mbPoint{
+	display:inline-block;
+	width:50px;
+}
+
+.rn_plus_btn{
+    text-align: right;
+}
+
+.rn_plus_btn_link{
+    position: fixed;
+    right : 45px;
+    top : 100px;
+}
+
+.rn_plus_btn_link > img{
+    width: 40px;
+}
+
+.rn_card_sports_event_choice, .rn_card_sports_location_choice,
+.rn_card_sports_age_choice{
+    margin-bottom: 20px;
+}
+
+.rn_top_btn a {
+    position: fixed;
+    left: 30px;
+    top: 100px;
+    color: black;
+    text-decoration: none;
+}
+
+/* INPUT 태그 WIDTH 또는 HEIGHT 설정 */
+#keyword,#meeting-time{
+	max-width:40%;
+}
+#create_host_comment{
+	max-width:50%;
+	height: 60px;
+}
+
+
+/* 매칭이 완료된 방에 회색 배경 씌우기 */
+.matchedBG{
+	
+	background-color:rgba(0, 0, 0, 0.5);
+	background:rgba(0, 0, 0, 0.5);
+}
+
+.matched{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:20px;
+}
+
+
+/* 비활성화 된 방 뒤로 미루기 */ 
+.matched~.rngButtons>.doJoinBtn{
+	z-index:-1;
+}
+
+
+/* 맨 위로 버튼 가장 위로 */
+.rn_top_btn>a{
+	z-index:1;
+}
+
+/* 방만들기 버튼 가장 위로 */
+.rn_plus_btn>a{
+	z-index:1;
+}
+
+
+/* 카드 위에 마우스 올렸을 떄 애니메이션 */
+.box {
+  border: 1px solid black;
+  box-shadow: 5px 5px 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+}
+
+.box:hover {
+	max-width:500px;
+	height: 110%;
+}
+
